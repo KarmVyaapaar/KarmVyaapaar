@@ -118,7 +118,7 @@ body{
 
 
 .about-us {
-    background-image: url('preview2.jpg');
+    background-image: url(../Images/preview2.jpg);
     opacity: 90%;
     background-repeat: no-repeat;
     background-position: center;

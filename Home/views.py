@@ -60,7 +60,7 @@ def register(request):
 def employ(request):
     if request.user.is_anonymous:
         return redirect("/")
-    return render(request, 'Home/employerprofile-index.html',{'info':info})
+    return render(request, 'Home/employerprofile-index.html')
 
 def worker(request):
     if request.method == "POST":
