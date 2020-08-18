@@ -47,8 +47,6 @@ def register(request):
                 user.save()
                 employer = Employer(username=username,firstname=firstname,lastname=lastname,phone=Phone,email=email,address=address)
                 employer.save()
-                print(Employer.objects.all())
-                print('user is created')
                 return redirect("/employerprofile")
         else:
             messages.info(request,'password is not matching..')
@@ -117,7 +115,6 @@ def loginWorker(request):
         name = request.POST.get('wusername')
         password = request.POST.get('wpassword')
         worker = Workers.objects.get(name=name)
-        print(worker)
         user = authenticate(username=name, password=password)
         if user is not None:
             login(request, user)
@@ -130,5 +127,4 @@ def search(request):
         return redirect("/")
     qur = request.GET.get('search')
     workers = Workers.objects.filter(skills = qur)
-    print(workers)
     return render(request, 'Home/search.html',{'workers':workers})
