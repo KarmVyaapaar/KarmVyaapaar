@@ -1,0 +1,324 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/homestyle.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>KarmVyaapar</title>
+  </head>
+  <body>
+
+
+<!-- navbar -->
+<section >
+  <!-- <div class="container"> -->
+    <div class="row">
+
+
+    <ul class="nav justify-content-end">
+        <!-- Just an image -->
+<!-- <nav class="navbar navbar-light bg-light"> -->
+    <li>
+    <a class="navbar-brand" href="#">
+      <img class="navlogo "src="{% static 'Images/logofinal.png' %}" width="240" height="60" alt="" loading="lazy">
+    </a>
+  </li>
+        <li class="nav-item">
+          <a class="nav-link nav1" href="#">HOME </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav1" href="#contact">CONTACT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav1" href="/register">REGISTER</a>
+        </li>
+        <li class="nav-item">
+          <!-- <a href="#myModal" class="trigger-btn nav1" data-toggle="modal">LOGIN</a> -->
+          <div class="dropdown">
+            <button class="btn  dropdown-toggle nav1" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              LOGIN
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item trigger-btn dropbtn"  href="#myModal"  data-toggle="modal" >As employer</button>
+              <button class="dropdown-item trigger-btn dropbtn"  href="#myModal2"  data-toggle="modal">As worker</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+</section>
+
+
+
+<!-- Login form for employer -->
+<section>
+
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+        <form action="/" method="post">
+            {% csrf_token %}
+          <div class="modal-header">
+            <h4 class="modal-title click1">Login as Employer</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" name="username" class="form-control" required="required">
+            </div>
+            <div class="form-group">
+              <div class="clearfix">
+                <label>Password</label>
+                <a href="#" class="float-right text-muted"><small>Forgot?</small></a>
+              </div>
+
+              <input type="password" class="form-control" name="password" required="required">
+            </div>
+          </div>
+          <div class="modal-footer justify-content-between">
+            <label class="form-check-label"><input type="checkbox"> Remember me</label>
+            <input type="submit" class="btn btn-primary butn"style="background-color: #10999f" href="#" value="Login">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </section>
+
+<!-- Login form for Worker -->
+<section>
+
+  <div id="myModal2" class="modal fade">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+        <form action="/loginWorker" method="post">
+            {% csrf_token %}
+          <div class="modal-header">
+            <h4 class="modal-title click1">Login as Worker</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" class="form-control" name="wusername" required="required">
+            </div>
+            <div class="form-group">
+              <div class="clearfix">
+                <label>Password</label>
+                <a href="#" class="float-right text-muted"><small>Forgot?</small></a>
+              </div>
+
+              <input type="password" name="wpassword" class="form-control" required="required">
+            </div>
+          </div>
+          <div class="modal-footer justify-content-between">
+            <label class="form-check-label"><input type="checkbox"> Remember me</label>
+            <input type="submit" class="btn btn-primary butn"style="background-color: #10999f" href="#" value="Login">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </section>
+
+<!-- About us -->
+
+
+<section class="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="au-box">
+                <div class="au-h">
+                    <h1>KarmVyaapar</h1>
+                </div>
+                <p>KarmVyaapar is an initiative for skilled and unskilled workers to provide them with various opportunities and discover jobs in their field. A website through which workers, labors, people searching for small work such as household work,helping hand for stores and shops, etc. can find work for themselves.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- heading1 -->
+
+<section class="head">
+    <div class="container">
+       <div class="row">
+          <h1>
+           HOW IT WORKS?
+           </h1>
+        </div>
+    </div>
+</section>
+
+
+
+<!--two cards-->
+<section>
+<div class= "container">
+  <div class="row">
+    <div class="card-deck">
+           <div class="card ">
+                 <img src="{% static 'Images/worker2.png' %}" class="card-img-top" alt="...">
+                   <div class="card-body">
+                       <h5 class="card-title">For Worker</h5>
+                       <p class="card-text">
+                        <li>Click the register button on the website</li>
+                        <li>Fill your details i.e, Name,Skill,Phone,Address</li>
+                          <li>You willl be notified when someone wants to hire you</li>
+                        </p>
+                   </div>
+           </div>
+               <div class="card ">
+                  <img src="{% static 'Images/employercustum.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                         <h5 class="card-title">For Employers</h5>
+                           <p class="card-text">
+                            <li>Register yourself on the website</li>
+                            <li>find the job as per needed to hire workers</li>
+                            <li>Find suitable job/field workers adn contact/talk to them on phone directly</li>
+                          </p>
+                    </div>
+                </div>
+     </div>
+  </div>
+</div>
+</section>
+
+<!-- heading2 -->
+
+<section class="head">
+  <div class="container">
+     <div class="row">
+        <h1>
+         SEARCH FOR THE SERVICES
+         </h1>
+      </div>
+  </div>
+</section>
+
+
+<!-- too many cards -->
+
+<section>
+<div class="container">
+  <div class="row">
+    <div class="card-deck">
+      <div class="card">
+        <img src="{% static 'Images/handyman.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-box">
+          <h5 class="card-title">Handyman</h5>
+          <p class="card-text">Handyman Services. Find the best handyman service. Handy connects you with professional handymen to help with odd jobs.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{% static 'Images/landscaper1-removebg-preview.png' %}" class="card-img-top" alt="...">
+        <div class="card-box">
+          <h5 class="card-title">Landscaper</h5>
+          <p class="card-text">The basic types of lawn and landscaping businesses include: Lawn mowing/maintenance. Sod installation/hydroseeding. Weeding or fertilizer and/or pest control application. Experienced Landscaper/gardner Search our professional profiles to find and hire today.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{% static 'Images/plumber-removebg-preview.png' %}" class="card-img-top" alt="...">
+        <div class="card-box">
+          <h5 class="card-title">Plumber</h5>
+          <p class="card-text">Find reliable and experienced plumbing services near you for fixing plumbing issues like clogged drain, shower installation, water pipe,etc. plumber profiles to find and hire plumber today.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="card-deck">
+      <div class="card">
+        <img src="{% static 'Images/mover-removebg-preview.png' %}" class="card-img-top" alt="...">
+        <div class="card-box">
+          <h5 class="card-title">Local Mover</h5>
+          <p class="card-text">Experienced Movers Search our professional mover profiles to find and hire last-minute movers today.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{% static 'Images/housekeeping.png' %}" class="card-img-top" alt="...">
+        <div class="card-box">
+          <h5 class="card-title">Housekeeping</h5>
+          <p class="card-text">Book House Cleaning Service & Make Your House Clean & Shiny.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{% static 'Images/electrian-removebg-preview.png' %}" class="card-img-top" alt="...">
+        <div class="card-box">
+          <h5 class="card-title">Electrian</h5>
+          <p class="card-text">We provide electrician services on-call within 2 hours who do it all.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="card-deck">
+      <div class="card">
+        <img src="{% static 'Images/chef.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-box">
+          <h5 class="card-title">Cook/Chef</h5>
+          <p class="card-text">Hire experienced cooks near you, chefs, cooking services, agencies at your locality and get find best Vegetarian, Non-Vegetarian.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{% static 'Images/maids.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-box">
+          <h5 class="card-title">Housemaid</h5>
+          <p class="card-text">Reliable Maid Service. Near Your Area Don't miss click now can trust me.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{% static 'Images/many more.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-box">
+          <h5 class="card-title">--------</h5>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- footer -->
+
+<section>
+        <div class="footer" id="contact">
+          <div class="container">
+            <div class="row">
+              <div class="box">
+            <h4 class="display-4">C O N T A C T :</h4>
+            <p  style="font: bolder;font-size: 40px; color: #41514e">KarmVyaapaar</p>
+            <p class="lead">info@karmvyaapaargmail.com</p>
+            <p class="lead">Number:9876543210</p>
+            <address>Nagpur,India</address>
+          </div>
+          </div>
+        </div>
+    </div>
+  
+</section>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
