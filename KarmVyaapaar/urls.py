@@ -23,4 +23,13 @@ urlpatterns = [
     path('i18n/',include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
     path('',views.index,name="index"),
+    path('register',views.register,name="register"),
+    path('employerprofile',views.employ,name="employer"),
+    path('worker',views.worker,name="worker"),
+    path('history',views.history,name="history"),
+    path('notification',views.notify,name="notification"),
+    path('FAQs',views.FAQ,name="FAQs"),
+    path('logout',views.logoutuser,name="signout"),
+    path('loginWorker',views.loginWorker,name="loginWorker"),
+    path('search',views.search,name='search'),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

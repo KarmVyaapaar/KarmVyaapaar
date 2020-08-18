@@ -1,0 +1,187 @@
+body{
+        margin: 0;
+        background-color: rgb(255, 255, 255);
+        font-family: 'Montserrat', sans-serif;
+}
+.container {
+    width: 1600px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* navbar */
+.nav{
+    margin: auto;
+
+}
+
+.nav1{
+    color: #10999f;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 0px;
+    padding: 20px;
+}
+.nav1:hover{
+    color: #31e3cb;
+}
+.navlogo{
+    margin-right: 500px;
+}
+
+
+/* dropdown */
+
+.dropbtn
+{
+    color: #10999f;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 20px;
+}
+.dropbtn:hover{
+    color: #31e3cb;
+}
+
+
+/* loginform */
+.modal-login {
+	width: 320px;
+}
+.modal-login .modal-content {
+	border-radius: 1px;
+	border: none;
+}
+.modal-login .modal-header {
+	position: relative;
+	justify-content: center;
+	background: #f2f2f2;
+}
+.modal-login .modal-body {
+	padding: 30px;
+}
+.modal-login .modal-footer {
+	background: #f2f2f2;
+}
+.modal-login h4 {
+	text-align: center;
+	font-size: 26px;
+}
+.modal-login label {
+	font-weight: normal;
+	font-size: 13px;
+}
+.modal-login .form-control, .modal-login .btn {
+	min-height: 38px;
+	border-radius: 2px;
+}
+.modal-login .hint-text {
+	text-align: center;
+}
+.modal-login .close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+.modal-login .checkbox-inline {
+	margin-top: 12px;
+}
+.modal-login input[type="checkbox"] {
+	position: relative;
+	top: 1px;
+}
+.modal-login .btn {
+	min-width: 100px;
+	background: #3498db;
+	border: none;
+	line-height: normal;
+}
+.modal-login .btn:hover, .modal-login .btn:focus {
+	background: #248bd0;
+}
+.modal-login .hint-text a {
+	color: #999;
+}
+.trigger-btn {
+	display: inline-block;
+	/* margin: auto; */
+}
+
+
+/* about us */
+
+
+.about-us {
+    background-image: url('preview2.jpg');
+    opacity: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top:10px;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    flex: 0 0 100%;
+}
+
+.au-box {
+    flex: 0 0 50%;
+    margin: 100px 0;
+}
+
+.au-box .au-h {
+    width: 65%;
+    font-size: 30px;
+    color: #41514e;
+}
+/* heading1 */
+.head{
+    width: 100%;
+}
+.head h1{
+    text-align:center;
+     font-size: 60px; 
+     color: #41514e;
+     font-weight: 800; 
+     border: 20px;
+     margin: auto;
+     padding: 40px;
+}
+/* two cards */
+.card-deck{
+    margin: auto;
+    padding: 30px;
+}
+
+.card{
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
+}
+.card img{
+    width: auto;
+    height: 300px;
+}
+.card-body{
+    width: 400px;
+}
+.card-box{
+    width: 300px;
+}
+
+
+
+/* footer */
+ 
+.footer{
+    background-color: #e4f8f6;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    flex: 0 0 100%;
+    
+}

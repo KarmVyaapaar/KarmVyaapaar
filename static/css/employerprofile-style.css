@@ -1,0 +1,202 @@
+@import url('<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    width: 1200px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.background-img{
+    height: auto;
+    position: center;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../Images/PicsArt.jpg);
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    font-family: sans-serif;
+    margin-bottom: 0px;
+}
+.sidebar{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #10999f;
+    transition: all 0.5s ease;
+}
+.sidebar header{
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    line-height: 150px;
+    background:  #047c83;
+    user-select: none;
+}
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 120px;
+    font-size: 20px;
+    color:rgba(245, 245, 245, 0.877);
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid #10999f;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.616);
+    transition: .4s;
+}
+
+ul li:hover a{
+    padding-left: 50px;
+    color: #41514e;
+}
+
+.sidebar ul a i{
+    margin-right: 16px;
+}
+#check{
+    display: none;
+}
+label #btn,label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background:  #10999f;
+    border-radius: 3px;
+}
+label #btn{
+    left: 95px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: .5s;
+}
+label #cancel{
+    z-index: 1111;
+    left: -250px;
+    top: 17px;
+    font-size: 30px;
+    color: white;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+#check:checked ~.sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+#check:checked ~ section{
+    margin-left: 250px;
+}
+section{
+    background: url(img.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all .5s;
+}
+
+/* end of sidemenu */
+
+.profile-box{
+    position: absolute;
+    width: 50%;
+    margin-left: 400px;
+    margin-top: 70px;
+    margin-bottom: 0px;
+    margin-right: 20px;
+}
+/* overlay form */
+.form-box{
+	width: 500px;
+	height: 600px;
+	position: relative;
+    margin: 8% auto;
+	background: #ffffff;
+	padding: 10px;
+	overflow: hidden;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0,0.281);
+    border-radius: 25px;
+}
+
+.ask
+{
+    padding: 30px;
+
+
+}
+.line
+{
+
+    height: 30px;
+    width: 230px;
+    margin-top: 20px;
+    position: relative;
+	outline: none;
+    background: transparent;
+}
+
+
+
+/* form box */
+
+.profile-img{
+    padding-left: 174px;
+}
+.profile-img img{
+    width: 130px;
+    height: 120px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.profile-img .file {
+    position: absolute;
+    overflow: hidden;
+    margin: 4px 120px;
+    display: block;
+    width: 40%;
+    border: none;
+    border-radius: 0;
+    font-size: 20px;
+    background: #212529b8;
+}
+.profile-btn .file input{
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 140px;
+    margin-right: 120px;
+}
+.profile-btn .file{
+    padding: 10px 13px;
+    text-align: center;
+    overflow: hidden;
+    margin: 4px 177px;
+    display: block;
+    border: none;
+    font-size: 15px;
+    background: rgba(128,128,128,0.411);
+    border-radius: 10px;
+    box-shadow: 10px 5px 10px rgba(114,114,113,0.555);
+}
+.profile-box{
+    margin-top: 20px;
+}
